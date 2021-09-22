@@ -28,28 +28,30 @@ namespace controle_de_estoque
 
         }
 
-        //função para ler a variavel Nome
-        public string GetNome()
+        public string nome
         {
-            return Nome;
+            //Lendo o conteudo de Nome
+            get { return Nome; }
+            //Atribuindo o conteudo de value em Nome depois da validação
+            set
+            {
+                if (value != null && value.Length > 1)
+                {
+                    Nome = value;
+                }
+            }
         }
 
-        //função para gravar o coteudo de nome na variavel Nome
-        public void SetNome(string nome)
+        public double preco
         {
-            Nome = nome;
+            //Ler o conteudo de Preco
+            get { return Preco; }
         }
 
-        //função para ler a variavel Preco
-        public double GetPreco()
+        public int quantidade
         {
-            return Preco;
-        }
-
-        //função para ler a variavel Quantidade
-        public int GetQuantidade()
-        {
-            return Quantidade;
+            //Ler o conteudo de Quantidade
+            get { return Quantidade; }
         }
 
         //Função para calcular o valor total do estoque
