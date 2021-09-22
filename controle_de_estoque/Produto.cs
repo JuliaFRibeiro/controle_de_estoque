@@ -22,31 +22,65 @@ namespace controle_de_estoque
             Quantidade = quantidade;
         }
 
-        // construtor
-        public double ValorTotalEstoque()
+        //contrutor padrao
+        public Produto()
         {
-            // claculo
+
+        }
+
+        //função para ler a variavel Nome
+        public string GetNome()
+        {
+            return Nome;
+        }
+
+        //função para gravar o coteudo de nome na variavel Nome
+        public void SetNome(string nome)
+        {
+            Nome = nome;
+        }
+
+        //função para ler a variavel Preco
+        public double GetPreco()
+        {
+            return Preco;
+        }
+
+        //função para ler a variavel Quantidade
+        public int GetQuantidade()
+        {
+            return Quantidade;
+        }
+
+        //Função para calcular o valor total do estoque
+        public double ValorTotalEmEstoque()
+        {
             return Preco * Quantidade;
         }
 
-        // construtor
-        public void AdicionarProduto(int quantidade)
+        //Função para adicionar Produtos ao estoque
+        public void AdicionarProdutos(int qtd)
         {
-            // claculo
-            Quantidade += quantidade;
+            Quantidade += qtd;
         }
 
-        // construtor
-        public void RemoverProdutos(int quantidade)
+        //Função para remover produtos do estoque
+        public void RemoverProdutos(int qtd)
         {
-            // claculo
-            Quantidade = Quantidade - quantidade;
+            Quantidade = Quantidade - qtd;
         }
 
-        // construtor
+        //Criando um formato para o ToString
         public override string ToString()
         {
-            return Nome + ", R$ " + Preco.ToString("F2", CultureInfo.InvariantCulture) + ", " + Quantidade + " unidades, Total: R$ " + ValorTotalEstoque().ToString("F2", CultureInfo.InvariantCulture);
+            return Nome
+            + ",R$"
+            + Preco.ToString("F2", CultureInfo.InvariantCulture)
+            + ","
+            + Quantidade
+            + " unidades,Total: R$"
+            + ValorTotalEmEstoque().ToString("F2", CultureInfo.InvariantCulture);
+
         }
     }
 

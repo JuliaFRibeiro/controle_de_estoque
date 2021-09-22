@@ -28,7 +28,7 @@ namespace controle_de_estoque
 
             Console.WriteLine("Digite o número de produtos a ser adicionado ao estoque: ");
             int qte = int.Parse(Console.ReadLine());
-            p.AdicionarProduto(qte);
+            p.AdicionarProdutos(qte);
 
             // resultado
             Console.WriteLine("Dados do atualizados: " + p);
