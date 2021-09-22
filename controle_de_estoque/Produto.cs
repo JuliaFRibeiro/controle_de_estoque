@@ -42,18 +42,6 @@ namespace controle_de_estoque
             }
         }
 
-        public double preco
-        {
-            //Ler o conteudo de Preco
-            get { return Preco; }
-        }
-
-        public int quantidade
-        {
-            //Ler o conteudo de Quantidade
-            get { return Quantidade; }
-        }
-
         //Função para calcular o valor total do estoque
         public double ValorTotalEmEstoque()
         {
